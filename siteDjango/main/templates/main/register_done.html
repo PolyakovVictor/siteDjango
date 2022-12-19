@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<div class="div_Form">
+
+
+    <form action="." method="post" class="form">
+
+            <h1 class="form_title">Successfully</h1>
+            <div style="color:#e0e0e0">{{ user_form.errors }}</div>
+
+        <div class="form_group">
+            <label class="formDone_label">Welcome {{ new_user.first_name }}!</label>
+        </div>
+        <div class="form_group">
+            <label class="formDone_label">Your account has been successfully created. Now you can <a href="/login">log in</a>.</label>
+        </div>
+
+
+    </form>
+
+</div>
+{% endblock %}

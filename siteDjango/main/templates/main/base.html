@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/public/topNavPanel.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'main/public/style.css' %}">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'main/public/mainForm.css' %}">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	{% block csslink %}{% endblock %}
+	<title>{% block title %}{% endblock %}</title>
+	
+</head>
+
+<body>
+
+	<div class="topNavPanel">
+		<nav>
+			{% if user.is_authenticated %}
+				<a href="{% url 'logout' %}">Logout</a>
+				<a href="#">{{ user.username|default:'Guest' }}</a>
+				<a href = "/addForm">Product</a>
+			{% else %}
+				<a href = "/register/">Sign up</a>
+				<a href = "/login/">Sign in</a>
+			{% endif %}
+            <a href = "/product_list/">Store</a>
+			<a href = "/">Main</a>
+		</nav>
+	</div>
+	<div class="main-cnt">
+		{% block content %}{% endblock %}
+	</div>
+
+
+	<script>
+		AOS.init();
+	</script>
+
+</body>
+<footer class="content-footer">
+    <p>Say hi to me on these social networks:</p>
+    <ul class="social">
+        <li><a class="css-is-deranged" href="https://github.com/PolyakovVictor">GitHub</a></li>
+        <li><a class="css-is-deranged" href="https://github.com/PolyakovVictor">Twitter</a></li>
+        <li><a class="css-is-deranged" href="https://github.com/PolyakovVictor">Google+</a></li>
+    </ul>
+  
+</footer>
+</html>

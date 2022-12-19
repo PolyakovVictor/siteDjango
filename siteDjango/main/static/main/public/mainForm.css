@@ -1,0 +1,107 @@
+.main-cnt{
+    width: 100%;
+    height: calc(100% - 214px);
+    background-color: #f2f2f2;
+}
+/*Style for description*/
+.description {
+	top: 35%;
+	left: 10%;
+	width: 35%;
+	position: absolute;
+}
+
+.description h1 {
+	margin: 0;
+	font-size: 40px;
+	color: black;
+}
+
+.description p {
+	color: black;
+	font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.shop {
+	background: none;
+	border: 2px solid #8B8C8C;
+	text-decoration: none;
+	color: #8B8C8C;
+	font-size: 16px;
+	text-transform: uppercase;
+	padding: 10px 25px;
+	border-radius: 5px;
+	font-weight: bold;
+	transition: .4s;
+}
+
+.shop:hover {
+	background: #8B8C8C;
+	color: #fff;
+}
+
+
+
+
+
+.content-footer {
+  text-align: center;
+}
+
+.content-footer > p {
+    /* Typography Declarations */
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+
+.content-footer {
+  text-align: center;
+}
+
+.content-footer > p {
+    font-family: 'Mukta', sans-serif;
+    /* Typography Declarations */
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: black;
+}
+
+.content-footer {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #f2f2f2;
+  text-decoration: none;
+}
+.social > li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+a {
+    text-decoration: none;
+    color:#8B8C8C;
+}
+
+.form_button{
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.form_button{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #0071f0;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form_button:focus,
+.form_button:hover{
+  background-color: rgba(0, 113,240,0.7);
+}

@@ -1,0 +1,47 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block csslink %}<link rel="stylesheet" type="text/css" href="{% static 'main/public/blocks.css' %}">{% endblock %}
+{% block title %}
+    {% if category %}{{ category.name }}{% else %}Products{% endif %}
+{% endblock %}
+{% block content %}
+<div class="border">
+    <h3>Categories</h3>
+    <ul>
+        <li {% if not category %}class="selected"{% endif %}>
+            <a href="{% url "product_list" %}">All</a>
+        </li>
+        {% for c in categories %}
+            <li {% if category.slug == c.slug %}class="selected"{% endif %}>
+                <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+
+    <section class="grid">
+            {% for product in products %}
+
+                <article class="grid-item" data-aos="fade-up">
+                    <div class="image">
+                        <a href="{{ product.get_absolute_url }}">
+                            <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'prdct3.jpg' %}{% endif %}">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h2>{{ product.name }}</h2>
+                        <div class="info-text">
+                            <p>${{ product.price }}</p>
+                        </div>
+                        <div class="button-wrap">
+                            <a class="atuin-btn" href="{{ product.get_absolute_url }}">buy</a>
+                        </div>
+                    </div>
+                </article>
+
+            {% endfor %}
+    </section>
+{% endblock %}

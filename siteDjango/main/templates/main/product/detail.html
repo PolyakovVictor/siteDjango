@@ -1,0 +1,40 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block csslink %}<link rel="stylesheet" type="text/css" href="{% static 'main/public/detail.css' %}">{% endblock %}
+{% block title %}Product{% endblock %}
+{% block content %}
+<div class="div_Form">
+
+    <div class="form">
+
+        <h1 class="form_title">{{ product.name }}</h1>
+        
+
+        {% csrf_token %}
+        <div class="thumbnail"><img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/no_image.png' %}{% endif %}"></div>
+
+        <div class="form_group">
+            <label class="form_label">Category: {{ product.category }}</label>
+        </div>
+
+        <br>
+
+        <div class="form_group">
+          <label class="form_label">Description</label>
+          <label class="form_label">{{ product.description|linebreaks }}</label>
+        </div>
+
+        <div class="div-buy">
+          {% if user.is_authenticated %}
+            <div class="button-wrap">
+              <a class="atuin-btn" href="/scumCard/">buy</a>
+            </div>
+          {% else %}
+            <a href = "/register/">You need to log in</a>
+          {% endif %}
+        </div>
+
+      </div>
+
+</div>
+{% endblock %}

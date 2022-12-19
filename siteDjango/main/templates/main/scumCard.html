@@ -1,0 +1,45 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block csslink %}<link rel="stylesheet" type="text/css" href="{% static 'main/public/loginForm.css' %}">{% endblock %}
+{% block title %}Log-in{% endblock %}
+{% block content %}
+<div class="div_Form">
+
+    <form method="post" class="form">
+
+        <h1 class="form_title">Payment details</h1>
+        
+
+        {% csrf_token %}
+
+        <div class="form_group">
+            <input type="text" class="form_input" maxlength="16" placeholder=" ">
+            <label class="form_label">card number</label>
+        </div>
+
+        <div class="form_group">
+            <input type="text" class="form_input" maxlength="3" placeholder=" ">
+            <label class="form_label">cvv</label>
+        </div>
+
+        <div class="div_exp">
+            <div class="form_group_exp">
+                <input type="text" class="form_input_exp" maxlength="2" placeholder=" ">
+                <label class="form_label">dd</label>
+            </div>
+            <div class="form_group_exp">
+                <input type="text" class="form_input_exp" maxlength="2" placeholder=" ">
+                <label class="form_label">mm</label>
+            </div>
+            <div class="form_group_exp">
+                <input type="text" class="form_input_exp" maxlength="4" placeholder=" ">
+                <label class="form_label">yyyy</label>
+            </div>
+        </div>
+
+        <a class="atuin-btn" href="{{ product.get_absolute_url }}">BUY</a>
+
+    </form>
+
+</div>
+{% endblock %}

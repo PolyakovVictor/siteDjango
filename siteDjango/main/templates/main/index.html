@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% csrf_token %}
+{% block title %}
+Main
+{% endblock %}
+
+{% block content %}
+<div class="description">
+    <h1>Painting shop</h1>
+    <p>Starting in 1987, my family began to sell paintings. Everything went well, a small shop was opened. It was quite popular because we had quality in the priority. But it was 2020, COVID appeared, the store closed and we opened the online store.</p>
+    <br>
+    <form action="/product_list/">
+        <button href="/product_list/" class="form_button">store</button>
+    </form>
+    <!-- <a href="#" class="shop">Купить сейчас</a> -->
+</div>
+
+
+{% endblock %}
+
+
+<!-- {% block footerForm %}
+  
+<footer class="content-footer">
+    <p>Say hi to me on these social networks:</p>
+    <ul class="social">
+        <li><a class="css-is-deranged" href="https://github.com/PolyakovVictor">GitHub</a></li>
+        <li><a class="css-is-deranged" href="https://github.com/PolyakovVictor">Twitter</a></li>
+        <li><a class="css-is-deranged" href="https://github.com/PolyakovVictor">Google+</a></li>
+    </ul>
+  
+</footer>
+{% endblock %} -->
+

@@ -1,0 +1,46 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block csslink %}<link rel="stylesheet" type="text/css" href="{% static 'main/public/loginForm.css' %}">{% endblock %}
+{% block title %}addproduct{% endblock %}
+{% block content %}
+<div class="div_Form">
+
+    <form method="post" class="form" enctype="multipart/form-data">
+
+        <h1 class="form_title">Create product</h1>
+        <div class="form_group">
+            <div style="color:#e0e0e0">{{ error }}</div>
+        </div>
+        
+
+        {% csrf_token %}
+
+        <div class="form_group">
+            {{ form.name }}
+            <label class="form_label">Product name</label>
+        </div>
+
+        <div class="form_group">
+            {{ form.slug }}
+            <label class="form_label">Slug</label>
+        </div>
+        <div class="form_group">
+            {{ form.image }}
+            <label class="form_label">Image</label>
+        </div>
+        <div class="form_group">
+            {{ form.description }}
+            <label class="form_label">Discription</label>
+        </div>
+        <div class="form_group">
+            {{ form.price }}
+            <label class="form_label">price</label>
+        </div>
+
+
+        <button type="submit" class="form_button" >Add</button>
+
+    </form>
+
+</div>
+{% endblock %}

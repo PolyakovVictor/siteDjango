@@ -1,0 +1,27 @@
+/* Добавьте черный цвет фона в верхнюю панель навигации. */
+.topNavPanel {
+    overflow: hidden;
+}
+
+/* Стиль ссылок внутри панели навигации */
+.topNavPanel a {
+    float: right;
+    color: black; /* Полупрозрачный чёрный текст */
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Mukta', sans-serif;
+}
+
+/* Изменить цвет ссылок при наведении */
+.topNavPanel a:hover {
+    color: rgba(141, 141, 141, 0.502);
+    transition-duration: 0.35s;
+}
+
+/* Добавить цвет к активной/текущей ссылке */
+.topNavPanel a.active {
+    background-color: #4CAF50;
+    color: rgba(215, 215, 215, 0.502);
+}

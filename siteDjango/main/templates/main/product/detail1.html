@@ -1,0 +1,39 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block csslink %}<link rel="stylesheet" type="text/css" href="{% static 'main/public/detail.css' %}">{% endblock %}
+{% block title %}
+    {% if category %}{{ category.title }}{% else %}Products{% endif %}
+{% endblock %}
+{% block content %}
+<!-- <div class="detail">
+    <div class="detail-img">
+        <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/no_image.png' %}{% endif %}">
+    </div>
+    <div class="detail-text">
+        <h1>Назва картини "{{ product.name }}"</h1><br>
+        <h2>Категорія: <a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2><br>
+        <h2>Ціна: ${{ product.price }}</h2><br>
+        <h2>Опис {{ product.description|linebreaks }}</h2>
+    </div>
+</div> -->
+<div class="card">
+  <div class="thumbnail"><img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/no_image.png' %}{% endif %}"></div>
+  <div class="right">
+    <h1>Name "{{ product.name }}"</h1>
+    <div class="category">
+      <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+    </div>
+    <div class="separator"></div>
+    <p>Description{{ product.description|linebreaks }}</p>
+  </div>
+  <h5>${{ product.price }}</h5>
+  {% if user.is_authenticated %}
+    <div class="button-wrap">
+      <a class="atuin-btn" href="/scumCard/">buy</a>
+    </div>
+  {% else %}
+    <h4>You need to log in</h4>
+  {% endif %}
+</div>
+
+{% endblock %}

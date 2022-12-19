@@ -1,0 +1,217 @@
+
+
+
+/* .main-cnt{
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+}
+
+.detail{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    padding: 16px 14px 80px 14px;
+}
+
+.detail-img {
+
+    float: left;
+    width: 35%;
+    height: 65%;
+    border: 5px solid #515151 ;
+    text-align: center;
+    border-radius: 25px;
+    transition: box-shadow .3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+  }
+
+.detail-text {
+    position: relative;
+    padding: 16px 14px 80px 14px;
+    float: left;
+}
+  
+.detail-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.detail h1 {
+    font-family: 'Roboto Condensed', Тahoma, sans-serif;
+    color: #8B8C8C;
+    font-size: 35px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}
+.detail-text h2 {
+    font-family: 'Roboto Condensed', Тahoma, sans-serif;
+    color: #8B8C8C;
+    font-size: 35px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.detail a{
+    font-family: 'Roboto Condensed', Тahoma, sans-serif;
+    color: #8B8C8C;
+    font-size: 27px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+.detail p{
+    font-family: 'Roboto Condensed', Тahoma, sans-serif;
+    color: #8B8C8C;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+} */
+
+
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+/*Just the background stuff*/
+
+
+/* The card */
+.card {
+    position: relative;
+    height: 450px;
+    width: 900px;
+    margin: 200px auto;
+    background-color: #FFF;
+    -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* Image on the left side */
+.thumbnail {
+    float: left;
+    position: relative;
+    left: 30px;
+    top: -30px;
+    height: auto;
+    width: max-content;
+    max-height: 300px; 
+    -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+}
+
+/*object-fit: cover;*/
+/*object-position: center;*/
+img{
+    width: 100%; 
+    height: auto;
+    max-height: 300px; 
+    object-fit: cover; 
+}
+/* Right side of the card */
+.right {
+    margin-left: 590px;
+    margin-right: 20px;
+}
+
+h1 {
+    font-family: 'Mukta', sans-serif;
+    padding-top: 15px;
+    font-size: 1.2rem;
+    color: #4B4B4B;
+    font-weight: bold;
+}
+
+.category {
+    background-color: #C3C3C3;
+    height: max-content;
+    width: max-content;
+    border-radius: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.01rem;
+    padding-bottom: 0.01rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+h2 {
+    
+    text-align: center;
+    font-size: 1rem;
+}
+.separator {
+    margin-top: 10px;
+    border: 1px solid #C3C3C3;
+}
+
+p {
+    font-weight: bold;
+    font-family: 'Mukta', sans-serif;
+    text-align: justify;
+    padding-top: 10px;
+    font-size: 1.2rem;
+    line-height: 150%;
+    color: #4B4B4B;
+}
+
+/* DATE of release*/
+h5 {
+    font-family: 'Mukta', sans-serif;
+    position: absolute;
+    left: 30px;
+    bottom: -116px;
+    font-size: 5rem;
+    color: #4B4B4B;
+}
+
+h4 {
+    font-family: 'Mukta', sans-serif;
+    position: absolute;
+    left: 610px;
+    font-size: 2rem;
+    color: #4B4B4B;
+    bottom: 15px;
+}
+
+
+
+.atuin-btn {
+    display: inline-flex;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 12px 30px;
+    color: #4B4B4B;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Mukta', sans-serif;
+    background-color: #e7e7e7;
+    cursor: pointer;
+    border: 2px solid #8B8C8C;
+    bottom: 50px;
+    left: 350px;
+}
+
+.button-wrap{
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    text-align: center;
+}

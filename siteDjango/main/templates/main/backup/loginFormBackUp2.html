@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+<div class="div_Form">
+    <form class="form">
+        <h1 class="form_title">Login</h1>
+        <div class="form_group">
+            <input type="email" class="form_input" placeholder=" " name="login">
+            <label class="form_label">Email</label>
+        </div>
+
+
+        <div class="form_group">
+            <input type="password" class="form_input" placeholder=" " name="password">
+            <label class="form_label">Password</label>
+        </div>
+        {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button type="submit" class="form_button">Войти</button>
+
+    </form>
+</div>
+{% endblock %}
